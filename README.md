@@ -1,8 +1,8 @@
-# PayFlow: Corporate Payments Platform
+# PayFlow: Internet Banking Payments Platform
 
-**A corporate payments platform built to explore distributed-systems and concurrency problems. It moves no real money.**
+**An internet banking payments platform built to explore distributed-systems and concurrency problems. It moves no real money.**
 
-Four Spring Boot microservices and an Angular front end model a simplified corporate banking flow. One user creates a payment, a different user approves it, and a mock bank posts the debit and credit over the IFT or NEFT rails. The services run on Oracle Database and Apache Kafka.
+Four Spring Boot microservices and an Angular front end model a simplified internet banking payments flow. One user creates a payment, a different user approves it, and a mock bank posts the debit and credit over the IFT or NEFT rails. The services run on Oracle Database and Apache Kafka.
 
 > **Source code is private.** This repository is a showcase of the design and the running app. A code walkthrough is available on request.
 
