@@ -8,6 +8,14 @@ Four Spring Boot microservices and an Angular front end model a simplified corpo
 
 <!-- Live demo: add the link here once deployed -->
 
+## Demo
+
+Maker creates a payment, checker approves it, and the bank posts it (shown at 2× speed). [Full-length video (MP4)](screenshots/demo.mp4)
+
+![PayFlow demo: maker creates, checker approves, payment completes](screenshots/demo.gif)
+
+## Architecture
+
 ![PayFlow architecture](docs/architecture.svg)
 
 ## Key features
@@ -39,22 +47,29 @@ Four Spring Boot microservices and an Angular front end model a simplified corpo
 4. **ledger-service** consumes it and asks **bank-service** to move the money.
 5. The ledger reports back, and the payment becomes *Completed*, with a bank reference, or *Failed*, with the bank's reason.
 
-<!-- Screenshots: uncomment once the images are in screenshots/
 ## Screenshots
+
+**Sign in.** Demo users can log in with one click.
+
+![Login](screenshots/01-login.png)
+
+**Maker** (`rahul.maker`)
 
 | | |
 |---|---|
-| ![Login](screenshots/01-login.png) | ![Make a payment](screenshots/02-make-payment.png) |
-| Sign in with demo quick-login | Make a payment |
-| ![Pending approvals](screenshots/03-pending-approvals.png) | ![Payment completed](screenshots/04-payment-completed.png) |
-| Checker's pending approvals | Payment completed with bank reference |
-| ![Admin dashboard](screenshots/05-admin-dashboard.png) | |
-| Admin dashboard | |
+| ![Maker dashboard](screenshots/02-maker-dashboard.png) | ![Make a payment](screenshots/03-make-payment.png) |
+| Dashboard: payments by status | Make a payment: IFT or NEFT |
+| ![Review](screenshots/04-review.png) | ![Submitted](screenshots/05-submitted.png) |
+| Review and confirm | Submitted, pending approval |
 
-### Demo: maker creates, checker approves, payment completes
+**Checker** (`priya.checker`, approval limit ₹5,00,000)
 
-![PayFlow demo](screenshots/demo.gif)
--->
+| | |
+|---|---|
+| ![Checker dashboard](screenshots/06-checker-dashboard.png) | ![Pending approvals](screenshots/07-pending-approvals.png) |
+| Dashboard: one payment awaits a decision | Pending approvals: approve or reject |
+| ![Sent for posting](screenshots/08-sent-for-posting.png) | ![Completed](screenshots/09-completed.png) |
+| Approved and sent for posting through Kafka | Posted at the bank, with a bank reference |
 
 ## Tech stack
 
